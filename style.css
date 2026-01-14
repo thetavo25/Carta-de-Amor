@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdf6f0;
+    color: #333;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+.header{
+    min-height: 85vh;
+    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("Imagenes pag/manos.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* MENU */
+.menu{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,.6);
+}
+
+.logo{
+    font-size: 32px;
+    font-weight: 800;
+    color: #e63946;
+}
+
+.menu .navbar ul li{
+    float: left;
+}
+
+.menu .navbar ul li a{
+    color: #fff;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.menu .navbar ul li a:hover{
+    color: #f1a7a7;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 30px;
+}
+
+.menu label{
+    display: none;
+}
+
+/* HEADER INFO */
+.header-info h1{
+    font-size: 64px;
+    color: #fff;
+}
+
+.header-info p{
+    font-size: 22px;
+    color: #f8d7da;
+    margin: 20px 0;
+}
+
+.btn-1{
+    background: #e63946;
+    color: #fff;
+    padding: 12px 40px;
+    border-radius: 30px;
+}
+
+/* SECCIONES CARTA */
+.carta{
+    padding: 90px 0;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.carta-1{
+    width: 50%;
+}
+
+.carta-1 h2{
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.carta-1 span{
+    color: #e63946;
+}
+
+.carta-1 p{
+    font-size: 17px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.btn-2{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 35px;
+    border-radius: 25px;
+    background: #f28482;
+    color: #fff;
+}
+
+/* IMÁGENES */
+.carta-2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-1{
+    width: 240px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+/*  MOVER "NUESTRA HISTORIA" A LA DERECHA */
+#historia .carta-1{
+    margin-left:0;
+}
+
+/* FOOTER */
+.footer{
+    padding: 60px 0;
+    background: #1e1e1e;
+}
+
+.footer-center{
+    text-align: center;
+}
+
+.footer-center h3{
+    font-size: 34px;
+    color: #e63946;
+}
+
+.footer-center p{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* RESPONSIVE */
+@media(max-width: 991px){
+
+    .menu label{
+        display: block;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #1e1e1e;
+        width: 100%;
+        display: none;
+    }
+
+    #menu:checked ~ .navbar{
+        display: block;
+    }
+
+    .carta{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carta-1,
+    .carta-2{
+        width: 100%;
+    }
+
+    /* QUITAR DESPLAZAMIENTO EN MÓVIL */
+    #historia .carta-1{
+        margin-left: 0;
+    }
+}
